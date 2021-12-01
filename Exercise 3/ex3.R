@@ -103,7 +103,7 @@ ggplot(D) +
   geom_hline(yintercept=calc_last_10_years$SSBmsy, linetype="dashed", color = "blue")    #equilibrium SSBmsy estimated using data over last 10 years
 
 #Plot stock status indicator based on SSB (examples below)
- mylrp <- (0.2*D$dSSB0a) # example 20% dynamicSSB0
+ mylrp <- (0.2*D$dSSB0a) # example 20% dynamic SSB0
  mylrp <- (0.5*calc_last_10_years$SSBmsy) # 50% equilibrium SSBmsy using data from last 10 years
 
 ggplot(D) + geom_path(mapping=aes(y=SSB/mylrp,x=Year),color="blue") + theme_classic() + labs(x="Year", y="Ratio SSB/LRP") + expand_limits(y=0) +
@@ -113,7 +113,7 @@ ggplot(D) + geom_path(mapping=aes(y=SSB/mylrp,x=Year),color="blue") + theme_clas
 # F indicators
 ########################################################################################################################
 
-#Equilibirium Fmsy using annual data for WAA, MAT, VUL
+#Equilibrium Fmsy using annual data for WAA, MAT, VUL
 
 D$F_msy_annual <- NA
 
